@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MIDIBRAIN · Wiki</title>
+  <link rel="stylesheet" href="/manual.css">
+</head>
+<body>
+  <a class="skip" href="#article">Skip to article</a>
+  <header class="reader-header">
+    <a class="brand" href="#index">MIDIBRAIN <span>WIKI</span></a>
+    <span class="local-label">Bundled with your app · no internet needed</span>
+    <a id="openTab" href="/manual#index" target="_blank" rel="noopener noreferrer">Open in tab ↗</a>
+  </header>
+  <div class="reader-layout">
+    <aside class="sidebar" aria-label="Wiki navigation">
+      <form id="searchForm" role="search">
+        <label for="search">Search the wiki</label>
+        <div class="search-row"><input id="search" type="search" placeholder="Try feedback, split, next bar…" autocomplete="off" aria-controls="results" aria-describedby="searchHint" disabled><button id="clearSearch" type="button" aria-label="Clear search" hidden>×</button></div>
+        <small id="searchHint">Full text · ⌘/Ctrl K to search</small>
+      </form>
+      <p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+      <nav id="results" aria-label="Search results" hidden></nav>
+      <details id="browse" open>
+        <summary>Browse the wiki</summary>
+        <div class="browse-modes" role="group" aria-label="Browse mode">
+          <button id="topicsMode" type="button" aria-pressed="true" aria-controls="pages">Topics</button>
+          <button id="azMode" type="button" aria-pressed="false" aria-controls="pages">A–Z</button>
+        </div>
+        <nav id="pages" aria-label="Wiki pages"></nav>
+      </details>
+    </aside>
+    <main id="reading" tabindex="-1">
+      <div id="loadStatus" role="status">Loading the bundled wiki…</div>
+      <button id="retry" type="button" hidden>Retry loading</button>
+      <div id="articleView" hidden>
+        <nav id="breadcrumbs" aria-label="Article location"></nav>
+        <p id="category" class="eyebrow"></p>
+        <details id="contents" class="contents" open><summary>On this page</summary><nav id="headings" aria-label="On this page"></nav></details>
+        <article id="article" tabindex="-1"></article>
+        <section id="subtopics" class="wiki-section" aria-label="Subtopics" hidden><h2>Subtopics</h2><div id="children" class="topic-cards"></div></section>
+        <footer class="article-footer">
+          <section id="relatedSection" hidden><h2>Related entries</h2><nav id="related" class="topic-links" aria-label="Related entries"></nav></section>
+          <details id="backlinksSection" hidden><summary>Linked from</summary><nav id="backlinks" class="topic-links" aria-label="Linked from"></nav></details>
+          <a id="source" href="/manual/source/index.md" target="_blank" rel="noopener noreferrer">Read Markdown source ↗</a>
+        </footer>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/manual.js"></script>
+</body>
+</html>

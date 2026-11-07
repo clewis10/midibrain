@@ -1,0 +1,326 @@
+{
+  "columns": [
+    [
+      1,
+      3
+    ],
+    [
+      2
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6
+    ]
+  ],
+  "normal": {
+    "input": [
+      {
+        "channel": 1,
+        "cc": 0
+      },
+      {
+        "channel": 1,
+        "cc": 1
+      },
+      {
+        "channel": 1,
+        "cc": 2
+      },
+      {
+        "channel": 1,
+        "cc": 3
+      },
+      {
+        "channel": 1,
+        "cc": 4
+      },
+      {
+        "channel": 1,
+        "cc": 5
+      },
+      {
+        "channel": 1,
+        "cc": 6
+      },
+      {
+        "channel": 1,
+        "cc": 7
+      },
+      {
+        "channel": 1,
+        "cc": 8
+      },
+      {
+        "channel": 1,
+        "cc": 9
+      },
+      {
+        "channel": 1,
+        "cc": 10
+      },
+      {
+        "channel": 1,
+        "cc": 11
+      },
+      {
+        "channel": 1,
+        "cc": 12
+      },
+      {
+        "channel": 1,
+        "cc": 13
+      },
+      {
+        "channel": 1,
+        "cc": 14
+      },
+      {
+        "channel": 1,
+        "cc": 15
+      }
+    ],
+    "feedback": [
+      {
+        "channel": 1,
+        "cc": 0
+      },
+      {
+        "channel": 1,
+        "cc": 1
+      },
+      {
+        "channel": 1,
+        "cc": 2
+      },
+      {
+        "channel": 1,
+        "cc": 3
+      },
+      {
+        "channel": 1,
+        "cc": 4
+      },
+      {
+        "channel": 1,
+        "cc": 5
+      },
+      {
+        "channel": 1,
+        "cc": 6
+      },
+      {
+        "channel": 1,
+        "cc": 7
+      },
+      {
+        "channel": 1,
+        "cc": 8
+      },
+      {
+        "channel": 1,
+        "cc": 9
+      },
+      {
+        "channel": 1,
+        "cc": 10
+      },
+      {
+        "channel": 1,
+        "cc": 11
+      },
+      {
+        "channel": 1,
+        "cc": 12
+      },
+      {
+        "channel": 1,
+        "cc": 13
+      },
+      {
+        "channel": 1,
+        "cc": 14
+      },
+      {
+        "channel": 1,
+        "cc": 15
+      }
+    ]
+  },
+  "alternate": {
+    "input": [
+      {
+        "channel": 5,
+        "cc": 0
+      },
+      {
+        "channel": 5,
+        "cc": 1
+      },
+      {
+        "channel": 5,
+        "cc": 2
+      },
+      {
+        "channel": 5,
+        "cc": 3
+      },
+      {
+        "channel": 5,
+        "cc": 4
+      },
+      {
+        "channel": 5,
+        "cc": 5
+      },
+      {
+        "channel": 5,
+        "cc": 6
+      },
+      {
+        "channel": 5,
+        "cc": 7
+      },
+      {
+        "channel": 5,
+        "cc": 8
+      },
+      {
+        "channel": 5,
+        "cc": 9
+      },
+      {
+        "channel": 5,
+        "cc": 10
+      },
+      {
+        "channel": 5,
+        "cc": 11
+      },
+      {
+        "channel": 5,
+        "cc": 12
+      },
+      {
+        "channel": 5,
+        "cc": 13
+      },
+      {
+        "channel": 5,
+        "cc": 14
+      },
+      {
+        "channel": 5,
+        "cc": 15
+      }
+    ],
+    "feedback": [
+      {
+        "channel": 5,
+        "cc": 0
+      },
+      {
+        "channel": 5,
+        "cc": 1
+      },
+      {
+        "channel": 5,
+        "cc": 2
+      },
+      {
+        "channel": 5,
+        "cc": 3
+      },
+      {
+        "channel": 5,
+        "cc": 4
+      },
+      {
+        "channel": 5,
+        "cc": 5
+      },
+      {
+        "channel": 5,
+        "cc": 6
+      },
+      {
+        "channel": 5,
+        "cc": 7
+      },
+      {
+        "channel": 5,
+        "cc": 8
+      },
+      {
+        "channel": 5,
+        "cc": 9
+      },
+      {
+        "channel": 5,
+        "cc": 10
+      },
+      {
+        "channel": 5,
+        "cc": 11
+      },
+      {
+        "channel": 5,
+        "cc": 12
+      },
+      {
+        "channel": 5,
+        "cc": 13
+      },
+      {
+        "channel": 5,
+        "cc": 14
+      },
+      {
+        "channel": 5,
+        "cc": 15
+      }
+    ]
+  },
+  "resets": [
+    {
+      "channel": 4,
+      "cc": 8,
+      "scope": {
+        "column": 1
+      }
+    },
+    {
+      "channel": 4,
+      "cc": 9,
+      "scope": "all"
+    },
+    {
+      "channel": 4,
+      "cc": 10,
+      "scope": {
+        "column": 2
+      }
+    },
+    {
+      "channel": 4,
+      "cc": 11,
+      "scope": {
+        "column": 3
+      }
+    },
+    {
+      "channel": 4,
+      "cc": 12,
+      "scope": "all"
+    },
+    {
+      "channel": 4,
+      "cc": 13,
+      "scope": {
+        "column": 4
+      }
+    }
+  ]
+}

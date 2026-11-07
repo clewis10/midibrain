@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MIDIBRAIN · Patch</title>
+  <link rel="stylesheet" href="/patch.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="/" title="MIDIBRAIN">MIDIBRAIN</a>
+    <div class="menu file-menu">
+      <button id="rigButton" aria-expanded="false" aria-controls="rigMenu" aria-haspopup="menu">File ▾</button>
+      <div id="rigMenu" class="popover" role="menu" hidden>
+        <button id="initPatch" role="menuitem">New / init patch…</button>
+        <button id="importRig" role="menuitem">Import rig configuration…</button>
+        <button id="exportRig" role="menuitem">Export rig configuration</button>
+      </div>
+    </div>
+    <input id="rigFile" type="file" accept=".json,application/json" hidden>
+    <div class="view-tools" role="group" aria-label="View">
+      <button id="tidy" title="Snap nodes into tidy columns, keeping your arrangement (Shift-click: rebuild the default columns)">Tidy</button>
+      <button id="fit" title="Fit visible nodes (F)">Fit</button>
+      <button id="controlDetails" class="switch-button" role="switch" aria-checked="false" aria-pressed="false"><span class="switch-track" aria-hidden="true"></span>MIDI details</button>
+      <button id="dockOpen" title="Show panel (P)" hidden>Panel</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="tools">
+      <div class="menu">
+        <button id="addButton" aria-expanded="false" aria-controls="addMenu" title="Add a node to the canvas: MOD, controller, destination or Thru route. Strips and inputs are added from a controller.">+ Add ▾</button>
+        <div id="addMenu" class="popover add-menu" role="menu" hidden>
+          <button id="addMod" role="menuitem" data-add="mod">∿ MOD <small>LFO, envelope or random source</small></button>
+          <button role="menuitem" data-add="controller">⌨ Controller <small>keys, pads, knobs or faders that send to MIDIBRAIN</small></button>
+          <button role="menuitem" data-add="device">▤ Destination <small>a device MIDIBRAIN controls (blank or catalogue)</small></button>
+          <button role="menuitem" data-add="operator">ƒ Operator <small>math or logic between MODs, knobs and channels</small></button>
+          <button role="menuitem" data-add="snapshot">◈ Snapshot <small>store and recall chosen strips, channels or devices</small></button>
+          <button role="menuitem" data-add="thru">⇢ MIDI Thru route <small>raw CC copy between ports</small></button>
+        </div>
+      </div>
+      <span class="tool-label" aria-hidden="true">Wires</span>
+      <div class="segmented" role="group" aria-label="Wire detail">
+        <button id="detailStrip" aria-pressed="true" title="One wire per strip (its channel membership)">Per strip</button>
+        <button id="detailControl" aria-pressed="false" title="One wire per control">Per control</button>
+      </div>
+      <div class="menu">
+        <button id="filtersButton" aria-expanded="false" aria-controls="filters">Show ▾</button>
+        <div id="filters" class="popover" hidden></div>
+      </div>
+      <div class="segmented mode" role="group" aria-label="Canvas mode">
+        <button id="modeEdit" aria-pressed="true" title="Edit: click anything to inspect and change it. Canvas controls never send MIDI.">✎ Edit</button>
+        <button id="play" aria-pressed="false" aria-disabled="true" title="Perform: drag canvas controls to send their value to the running rig">▶ Perform</button>
+      </div>
+      <button id="undo" title="Undo (⌘Z)" aria-label="Undo">↶</button>
+      <button id="redo" title="Redo (⇧⌘Z)" aria-label="Redo">↷</button>
+    </div>
+    <div class="apply">
+      <button id="portAlert" class="port-alert" hidden title="A configured MIDI port is not connected. Open System to see which."></button>
+      <span id="status" role="status"></span>
+      <button id="showProblem" hidden>Show</button>
+      <button id="discard" disabled>Discard</button>
+      <button id="apply" class="primary" disabled>Apply to rig</button>
+    </div>
+  </header>
+  <div id="banner" class="banner" hidden></div>
+  <div id="performBar" class="perform-bar" hidden>PERFORM · dragging a canvas control sends its value to the running rig when you let go (Shift = fine) · buttons toggle · Esc returns to Edit</div>
+  <div id="workarea" class="workarea" data-side="right">
+    <main id="viewport" tabindex="-1" aria-label="Patch canvas">
+      <div id="world">
+        <svg id="wires" aria-hidden="true"></svg>
+        <div id="nodes"></div>
+        <svg id="wiresTop" aria-hidden="true"></svg>
+      </div>
+      <div id="marquee" class="marquee" hidden></div>
+    </main>
+    <div id="divider" class="divider" role="separator" tabindex="0" aria-label="Resize panel" aria-valuemin="18" aria-valuemax="75"></div>
+    <aside id="dock" class="dock" aria-label="Panel">
+      <header class="dock-head">
+        <nav class="dock-tabs" aria-label="Panel tools">
+          <button data-tab="inspect" aria-pressed="true" title="Edit the selected wire, node, control or input">◉ Inspect</button>
+          <button data-tab="map" aria-pressed="false" title="Every input path: IN → OUT, feedback and device sync">⇄ MIDI map</button>
+          <button data-tab="devices" aria-pressed="false" title="Full device definitions: parameters, CCs, ranges, curves">⌘ Devices</button>
+          <button data-tab="clock" aria-pressed="false">◷ Clock</button>
+          <button data-tab="system" aria-pressed="false" title="Runtime, ports, MIDI monitor and global settings">⚙ System</button>
+          <button data-tab="manual" aria-pressed="false" title="Search and read the bundled MIDIBRAIN wiki">? Wiki</button>
+        </nav>
+        <a id="panelManual" class="manual-link" href="/manual#inspect" target="_blank" rel="noopener noreferrer" title="Read about this panel in the wiki (opens a new tab)" hidden>Panel help ↗</a>
+        <div class="dock-tools" role="group" aria-label="Panel position">
+          <button data-side="left" title="Dock left" aria-label="Dock left">◧</button>
+          <button data-side="right" title="Dock right" aria-label="Dock right">◨</button>
+          <button data-side="top" title="Dock top" aria-label="Dock top">⬒</button>
+          <button data-side="bottom" title="Dock bottom" aria-label="Dock bottom">⬓</button>
+          <button id="dockClose" title="Hide panel (P)" aria-label="Hide panel">×</button>
+        </div>
+      </header>
+      <span id="toolDraftStatus" role="status"></span>
+      <section id="inspectPane" class="dock-body">
+        <div class="inspect-head"><button id="inspectorBack" class="ghost" title="Back one level (Esc closes)" aria-label="Back" hidden>←</button><nav id="inspectorTrail" class="trail" aria-label="Where you are"></nav><span id="inspectorKind" class="kind"></span><strong id="inspectorTitle" hidden></strong><span id="inspectorHints" class="hints"></span><a id="inspectorManual" class="manual-link" href="/manual#patch" target="_blank" rel="noopener noreferrer" title="Read about this selection in a separate wiki tab">Wiki ↗</a></div>
+        <div id="inspectorBody"></div>
+      </section>
+      <section id="mapPane" class="dock-body" hidden></section>
+      <section id="systemPane" class="dock-body" hidden></section>
+      <div id="toolNotice" class="tool-notice" hidden></div>
+      <div id="classicBar" class="classic-bar" hidden><span>Bulk routing · input addresses and MIDI learn</span><button id="classicBack" type="button">← MIDI map</button></div>
+      <iframe id="toolFrame" title="Rig tools" hidden></iframe>
+      <iframe id="manualFrame" title="MIDIBRAIN wiki" hidden></iframe>
+    </aside>
+  </div>
+  <footer class="foot">
+    <span id="counts"></span>
+    <span class="hint" id="hint">Drag from a ● output to an input · click a wire to edit · ⌫ deletes · Shift-drag selects several nodes · scroll pans · pinch/⌘-scroll zooms</span>
+  </footer>
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+  <div id="toast" class="toast" role="alert" hidden></div>
+  <script type="module" src="/patch.js"></script>
+</body>
+</html>

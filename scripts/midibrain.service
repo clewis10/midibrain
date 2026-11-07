@@ -1,0 +1,19 @@
+[Unit]
+Description=MIDIBRAIN performance mixer
+After=sound.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+# Replace "pi" and the paths if your user or install folder differs.
+User=pi
+SupplementaryGroups=audio
+WorkingDirectory=/home/pi/midibrain
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/pi/midibrain/.venv/bin/midibrain-mixer run --config /home/pi/midibrain/config/performance.local.json --allow-unverified --web --host 0.0.0.0 --port 8788
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target

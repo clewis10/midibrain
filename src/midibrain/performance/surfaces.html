@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark">
+  <title>midi:brain · Rig canvas</title>
+  <link rel="stylesheet" href="/surfaces.css"><script type="module" src="/surfaces.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">[M]</span> midi<span class="colon">:</span>brain<span class="cursor">_</span></a>
+    <span class="edition">WORKSPACE / 05</span>
+    <span id="runtimeStatus" class="safety">○ CANVAS OUTPUT OFF</span>
+    <button id="inventoryToggle" class="outline">Rig & files</button>
+    <a href="/" class="legacy-link">Classic view ↗</a>
+  </header>
+  <nav class="workspace-navigation" aria-label="Rig tools"><button data-tool="canvas" aria-pressed="true">▦ Canvas</button><button data-tool="sidechain">∿ MOD</button><button data-tool="snapshots">◈ Snapshots</button><button data-tool="controls">⇄ Routing</button><button data-tool="clock">◷ Clock</button><button data-tool="devices">⌘ Devices</button><button data-tool="activity">≋ Activity</button><span id="runtimeDraftStatus" role="status"></span></nav>
+  <div id="workspaceShell" class="workspace-shell" data-split="none">
+  <div id="canvasPane" class="app-layout" role="region" aria-label="Controller canvas pane" tabindex="-1">
+    <dialog id="inventoryDialog" aria-label="Rig inventory"><aside class="sidebar" aria-label="Rig inventory">
+      <button id="closeInventory" class="icon-button dialog-close" aria-label="Close rig inventory">×</button>
+      <div class="inventory-heading"><span class="eyebrow">THE RIG</span><button id="workspaceSettings" class="icon-button" aria-label="Workspace settings">···</button></div>
+      <h1 id="workspaceName">Performance rig</h1>
+      <button id="readActiveRig" class="outline full">Read active rig</button>
+      <div class="section-heading"><span>CONTROLLERS</span><button id="addController" class="icon-button" aria-label="Add controller">+</button></div>
+      <nav id="controllerList" aria-label="Controllers on canvas"></nav>
+      <div class="section-heading"><span>DESTINATIONS</span><button id="deviceLibrary" class="icon-button" aria-label="Device definitions">↗</button></div>
+      <div id="deviceList"></div>
+      <button id="refreshDefinitions" class="quiet full">↻ Read rig definitions</button>
+      <p id="definitionStatus" class="inventory-note">Reading device definitions…</p>
+      <div class="sidebar-bottom">
+        <div class="palette" aria-hidden="true"><i></i><i></i><i></i></div>
+        <span class="eyebrow">ONE RIG. YOUR WORKSPACE.</span>
+        <p>Controls belong to hardware.<br>Assignments belong to you.</p>
+        <div class="file-actions"><button id="export" class="quiet">Export ↓</button><button id="import" class="quiet">Import ↑</button></div>
+        <button id="resetDemo" class="quiet full">Load example layout</button>
+        <input id="importFile" type="file" accept=".json,application/json" hidden>
+        <p id="storageStatus" class="inventory-note">Saved in this browser only</p>
+      </div>
+    </aside></dialog>
+    <main class="main">
+      <section class="workspace-heading"><div class="workspace-title"><h2 id="pageTitle">Rig canvas<span class="title-dot">.</span></h2><span id="performStatus" role="status"></span></div><div class="workspace-session"><button id="modMonitorToggle" class="quiet perform-only" aria-pressed="true">MOD overview</button><div class="mode-switch" role="group" aria-label="Workspace mode"><button id="buildMode" aria-pressed="true">Edit</button><button id="performMode" aria-pressed="false">Perform</button></div></div></section>
+      <div class="canvas-toolbar"><div class="page-bar"><nav id="pageTabs" aria-label="Canvas pages"></nav><button id="addPage" class="quiet">+ Page</button><button id="pageSettings" class="quiet" hidden>Page settings</button></div><div class="canvas-view"><label>Controls<select id="canvasZoom" aria-label="Canvas zoom"><option value="50">50%</option><option value="75">75%</option><option value="100">100%</option><option value="125">125%</option><option value="150">150%</option><option value="fit">Auto</option></select></label><button id="controlDetails" class="quiet" aria-pressed="false" title="Show parameter names, MIDI addresses and output counts">MIDI details</button></div><div class="canvas-actions"><button id="undo" class="icon-button" title="Undo (⌘/Ctrl Z)" aria-label="Undo">↶</button><button id="redo" class="icon-button" title="Redo (⌘/Ctrl Shift Z)" aria-label="Redo">↷</button><button id="addModule" class="primary">+ Add module</button></div></div>
+      <section id="performOverview" class="performance-overview" aria-label="Live modulation overview" hidden><div id="performClock" class="performance-clock"></div><div id="performMods" class="performance-mods"></div></section>
+      <div class="canvas-scroll"><div id="canvasStage"><div id="canvas" class="canvas" aria-label="Shared controller canvas"><div class="loading">Reading your workspace…</div></div></div></div>
+      <footer class="canvas-footer"><div class="canvas-caption"><span id="canvasCount">Loading workspace</span><span id="canvasSummary"></span><span id="conflictCount" class="conflict-summary"></span></div><span id="modeHint">Drag headers to arrange / click a strip’s channel set to assign</span></footer>
+    </main>
+    <dialog id="editorDialog" class="inspector" aria-label="Mapping editor"><div class="inspector-top"><span class="eyebrow">EDIT / INSPECT</span><span id="selectionType">CONTROL</span><button id="closeEditor" class="icon-button" aria-label="Close mapping editor">×</button></div><nav id="editorTabs" aria-label="Editor sections"></nav><div id="inspectorBody"></div></dialog>
+  </div>
+  <section id="canvasDiagnostics" hidden><span id="rigSourceStatus"></span><div class="signal-heading"><span>OUTPUT PREVIEW</span><span>SIMULATED / NOT HARDWARE READBACK</span></div><div id="signalPreview">Move a control to inspect its resolved MIDI destinations.</div></section>
+  <div id="paneDivider" class="pane-divider" role="separator" aria-label="Resize canvas and tool panes" aria-orientation="vertical" aria-valuemin="25" aria-valuemax="75" aria-valuenow="60" tabindex="0" hidden></div>
+  <section id="runtimeWorkspace" aria-label="Docked rig tools" hidden><header class="tool-pane-heading"><h2 id="toolPaneTitle">Rig tools</h2><div class="pane-layout-controls" role="group" aria-label="Tool pane layout"><button id="splitSide" class="quiet" aria-label="Split side by side" title="Side by side" aria-pressed="true">◧ <span>Side by side</span></button><button id="splitStack" class="quiet" aria-label="Split top and bottom" title="Top and bottom" aria-pressed="false">⬒ <span>Stacked</span></button><button id="closeToolPane" class="icon-button" aria-label="Close tool pane" title="Close tool pane">×</button></div></header><iframe id="runtimeFrame" title="Existing MIDI runtime tools"></iframe></section>
+  </div>
+  <div id="notice" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="moduleDialog"><form method="dialog" class="dialog-shell"><div class="dialog-heading"><div><div class="eyebrow">BUILD THE PHYSICAL SHAPE</div><h2>Add module</h2></div><button class="icon-button" aria-label="Close">×</button></div><label>Controller<select id="moduleController"></select></label><div id="moduleChoices" class="module-choices"></div><div class="dialog-fields"><label>Columns<input id="moduleColumns" type="number" min="1" max="8" value="4"></label><label>Rows<input id="moduleRows" type="number" min="1" max="8" value="1"></label></div><label class="check-label"><input id="moduleLayers" type="checkbox"> Enable input variants</label><p class="muted small">New addresses are placeholders. Set them to match your hardware before any future runtime integration.</p><button id="createModule" type="button" class="primary full">Place on canvas</button></form></dialog>
+  <dialog id="controllerDialog"><form method="dialog" class="dialog-shell"><div class="dialog-heading"><div><div class="eyebrow">ADD TO THE SAME WORKSPACE</div><h2>Add controller</h2></div><button class="icon-button" aria-label="Close">×</button></div><label>Name<input id="controllerName" value="New controller" maxlength="120"></label><p class="muted small">Controllers identify where inputs come from. Their modules live together on the rig canvas—not in separate pages.</p><button id="createController" type="button" class="primary full">Add controller</button></form></dialog>
+  <dialog id="devicesDialog"><div class="dialog-shell"><div class="dialog-heading"><div><div class="eyebrow">DEVICE LIBRARY / SKETCH COPY</div><h2>Device definitions</h2></div><button id="closeDevices" class="icon-button" aria-label="Close">×</button></div><p class="muted small">Read-only definitions saved with this workspace. Use Read rig definitions to refresh from the active profile. Logical channels resolve to the exact MIDI channel and CC defined by the device. Refreshing never changes the active profile.</p><div id="definitionDetails"></div></div></dialog>
+</body>
+</html>

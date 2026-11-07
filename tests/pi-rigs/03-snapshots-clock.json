@@ -1,0 +1,915 @@
+{
+  "format": "midibrain-rig",
+  "version": 2,
+  "profile": {
+    "version": 1,
+    "hardware_verified": false,
+    "ports": {
+      "a4_input": "TEST - Trigger input",
+      "twister_input": "TEST - Twister input",
+      "l6_output": "TEST - L6 Mixer Control",
+      "twister_output": "TEST - Twister feedback"
+    },
+    "update_hz": 100,
+    "trigger": {
+      "channel": 5,
+      "note": null
+    },
+    "sidechain": {
+      "release_ms": 250.0,
+      "max_hold_ms": 30000,
+      "velocity_exponent": 1
+    },
+    "channels": [
+      {
+        "id": 1,
+        "depth": 0.5,
+        "parameters": {
+          "low": {
+            "channel": 1,
+            "cc": 0,
+            "reset": 64
+          },
+          "high": {
+            "channel": 1,
+            "cc": 1,
+            "reset": 64
+          },
+          "aux1": {
+            "channel": 1,
+            "cc": 2,
+            "reset": 0
+          },
+          "aux2": {
+            "channel": 1,
+            "cc": 3,
+            "reset": 0
+          },
+          "mid": {
+            "channel": 1,
+            "cc": 4,
+            "reset": 64
+          },
+          "efx": {
+            "channel": 1,
+            "cc": 5,
+            "reset": 0
+          },
+          "volume": {
+            "channel": 1,
+            "cc": 6
+          }
+        },
+        "volume_curve": [
+          [
+            0,
+            100
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": 2,
+        "depth": 0.5,
+        "parameters": {
+          "low": {
+            "channel": 1,
+            "cc": 7,
+            "reset": 64
+          },
+          "high": {
+            "channel": 1,
+            "cc": 8,
+            "reset": 64
+          },
+          "aux1": {
+            "channel": 1,
+            "cc": 9,
+            "reset": 0
+          },
+          "aux2": {
+            "channel": 1,
+            "cc": 10,
+            "reset": 0
+          },
+          "mid": {
+            "channel": 1,
+            "cc": 11,
+            "reset": 64
+          },
+          "efx": {
+            "channel": 1,
+            "cc": 12,
+            "reset": 0
+          },
+          "volume": {
+            "channel": 1,
+            "cc": 13
+          }
+        },
+        "volume_curve": [
+          [
+            0,
+            100
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": 3,
+        "depth": 0.5,
+        "parameters": {
+          "low": {
+            "channel": 1,
+            "cc": 14,
+            "reset": 64
+          },
+          "high": {
+            "channel": 1,
+            "cc": 15,
+            "reset": 64
+          },
+          "aux1": {
+            "channel": 1,
+            "cc": 16,
+            "reset": 0
+          },
+          "aux2": {
+            "channel": 1,
+            "cc": 17,
+            "reset": 0
+          },
+          "mid": {
+            "channel": 1,
+            "cc": 18,
+            "reset": 64
+          },
+          "efx": {
+            "channel": 1,
+            "cc": 19,
+            "reset": 0
+          },
+          "volume": {
+            "channel": 1,
+            "cc": 20
+          }
+        },
+        "volume_curve": [
+          [
+            0,
+            100
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": 4,
+        "depth": 0.5,
+        "parameters": {
+          "low": {
+            "channel": 1,
+            "cc": 21,
+            "reset": 64
+          },
+          "high": {
+            "channel": 1,
+            "cc": 22,
+            "reset": 64
+          },
+          "aux1": {
+            "channel": 1,
+            "cc": 23,
+            "reset": 0
+          },
+          "aux2": {
+            "channel": 1,
+            "cc": 24,
+            "reset": 0
+          },
+          "mid": {
+            "channel": 1,
+            "cc": 25,
+            "reset": 64
+          },
+          "efx": {
+            "channel": 1,
+            "cc": 26,
+            "reset": 0
+          },
+          "volume": {
+            "channel": 1,
+            "cc": 27
+          }
+        },
+        "volume_curve": [
+          [
+            0,
+            100
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": 5,
+        "depth": 0.5,
+        "parameters": {
+          "low": {
+            "channel": 1,
+            "cc": 28,
+            "reset": 64
+          },
+          "high": {
+            "channel": 1,
+            "cc": 29,
+            "reset": 64
+          },
+          "aux1": {
+            "channel": 1,
+            "cc": 30,
+            "reset": 0
+          },
+          "aux2": {
+            "channel": 1,
+            "cc": 31,
+            "reset": 0
+          },
+          "mid": {
+            "channel": 1,
+            "cc": 32,
+            "reset": 64
+          },
+          "efx": {
+            "channel": 1,
+            "cc": 33,
+            "reset": 0
+          },
+          "volume": {
+            "channel": 1,
+            "cc": 34
+          }
+        },
+        "volume_curve": [
+          [
+            0,
+            100
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": 6,
+        "depth": 0.5,
+        "parameters": {
+          "low": {
+            "channel": 1,
+            "cc": 35,
+            "reset": 64
+          },
+          "high": {
+            "channel": 1,
+            "cc": 36,
+            "reset": 64
+          },
+          "aux1": {
+            "channel": 1,
+            "cc": 37,
+            "reset": 0
+          },
+          "aux2": {
+            "channel": 1,
+            "cc": 38,
+            "reset": 0
+          },
+          "mid": {
+            "channel": 1,
+            "cc": 39,
+            "reset": 64
+          },
+          "efx": {
+            "channel": 1,
+            "cc": 40,
+            "reset": 0
+          },
+          "volume": {
+            "channel": 1,
+            "cc": 41
+          }
+        },
+        "volume_curve": [
+          [
+            0,
+            100
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    ],
+    "twister": {
+      "columns": [
+        [
+          1,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "normal": {
+        "input": [
+          {
+            "channel": 1,
+            "cc": 0
+          },
+          {
+            "channel": 1,
+            "cc": 1
+          },
+          {
+            "channel": 1,
+            "cc": 2
+          },
+          {
+            "channel": 1,
+            "cc": 3
+          },
+          {
+            "channel": 1,
+            "cc": 4
+          },
+          {
+            "channel": 1,
+            "cc": 5
+          },
+          {
+            "channel": 1,
+            "cc": 6
+          },
+          {
+            "channel": 1,
+            "cc": 7
+          },
+          {
+            "channel": 1,
+            "cc": 8
+          },
+          {
+            "channel": 1,
+            "cc": 9
+          },
+          {
+            "channel": 1,
+            "cc": 10
+          },
+          {
+            "channel": 1,
+            "cc": 11
+          },
+          {
+            "channel": 1,
+            "cc": 12
+          },
+          {
+            "channel": 1,
+            "cc": 13
+          },
+          {
+            "channel": 1,
+            "cc": 14
+          },
+          {
+            "channel": 1,
+            "cc": 15
+          }
+        ],
+        "feedback": [
+          {
+            "channel": 1,
+            "cc": 0
+          },
+          {
+            "channel": 1,
+            "cc": 1
+          },
+          {
+            "channel": 1,
+            "cc": 2
+          },
+          {
+            "channel": 1,
+            "cc": 3
+          },
+          {
+            "channel": 1,
+            "cc": 4
+          },
+          {
+            "channel": 1,
+            "cc": 5
+          },
+          {
+            "channel": 1,
+            "cc": 6
+          },
+          {
+            "channel": 1,
+            "cc": 7
+          },
+          {
+            "channel": 1,
+            "cc": 8
+          },
+          {
+            "channel": 1,
+            "cc": 9
+          },
+          {
+            "channel": 1,
+            "cc": 10
+          },
+          {
+            "channel": 1,
+            "cc": 11
+          },
+          {
+            "channel": 1,
+            "cc": 12
+          },
+          {
+            "channel": 1,
+            "cc": 13
+          },
+          {
+            "channel": 1,
+            "cc": 14
+          },
+          {
+            "channel": 1,
+            "cc": 15
+          }
+        ]
+      },
+      "alternate": {
+        "input": [
+          {
+            "channel": 5,
+            "cc": 0
+          },
+          {
+            "channel": 5,
+            "cc": 1
+          },
+          {
+            "channel": 5,
+            "cc": 2
+          },
+          {
+            "channel": 5,
+            "cc": 3
+          },
+          {
+            "channel": 5,
+            "cc": 4
+          },
+          {
+            "channel": 5,
+            "cc": 5
+          },
+          {
+            "channel": 5,
+            "cc": 6
+          },
+          {
+            "channel": 5,
+            "cc": 7
+          },
+          {
+            "channel": 5,
+            "cc": 8
+          },
+          {
+            "channel": 5,
+            "cc": 9
+          },
+          {
+            "channel": 5,
+            "cc": 10
+          },
+          {
+            "channel": 5,
+            "cc": 11
+          },
+          {
+            "channel": 5,
+            "cc": 12
+          },
+          {
+            "channel": 5,
+            "cc": 13
+          },
+          {
+            "channel": 5,
+            "cc": 14
+          },
+          {
+            "channel": 5,
+            "cc": 15
+          }
+        ],
+        "feedback": [
+          {
+            "channel": 5,
+            "cc": 0
+          },
+          {
+            "channel": 5,
+            "cc": 1
+          },
+          {
+            "channel": 5,
+            "cc": 2
+          },
+          {
+            "channel": 5,
+            "cc": 3
+          },
+          {
+            "channel": 5,
+            "cc": 4
+          },
+          {
+            "channel": 5,
+            "cc": 5
+          },
+          {
+            "channel": 5,
+            "cc": 6
+          },
+          {
+            "channel": 5,
+            "cc": 7
+          },
+          {
+            "channel": 5,
+            "cc": 8
+          },
+          {
+            "channel": 5,
+            "cc": 9
+          },
+          {
+            "channel": 5,
+            "cc": 10
+          },
+          {
+            "channel": 5,
+            "cc": 11
+          },
+          {
+            "channel": 5,
+            "cc": 12
+          },
+          {
+            "channel": 5,
+            "cc": 13
+          },
+          {
+            "channel": 5,
+            "cc": 14
+          },
+          {
+            "channel": 5,
+            "cc": 15
+          }
+        ]
+      },
+      "resets": []
+    },
+    "rig_name": "Pi test 03 - Snapshots and clock",
+    "controller_inputs_migrated": true,
+    "bank_setup": {
+      "devices": [
+        {
+          "id": "twister",
+          "name": "MIDI Fighter Twister",
+          "kind": "controller",
+          "input": "TEST - Twister input",
+          "feedback_output": "TEST - Twister feedback",
+          "controls_per_bank": 2,
+          "alternate": true,
+          "layers": [
+            "normal",
+            "alternate"
+          ]
+        },
+        {
+          "id": "l6",
+          "name": "Zoom L6",
+          "kind": "destination",
+          "output": "TEST - L6 Mixer Control",
+          "initialize": false,
+          "channels": [
+            {
+              "id": 1,
+              "name": "Channel 1",
+              "parameters": {
+                "low": {
+                  "channel": 1,
+                  "cc": 33,
+                  "reset": 64,
+                  "label": "Low",
+                  "section": "EQ",
+                  "csv_name": "EQ LO LEVEL CH 1",
+                  "continuous": true
+                },
+                "high": {
+                  "channel": 1,
+                  "cc": 1,
+                  "reset": 64,
+                  "label": "High",
+                  "section": "EQ",
+                  "csv_name": "EQ HI LEVEL CH 1",
+                  "continuous": true
+                },
+                "mid": {
+                  "channel": 1,
+                  "cc": 21,
+                  "reset": 64,
+                  "label": "Mid",
+                  "section": "EQ",
+                  "csv_name": "EQ MID LEVEL CH 1",
+                  "continuous": true
+                },
+                "level": {
+                  "channel": 1,
+                  "cc": 83,
+                  "label": "Level",
+                  "reset": 80,
+                  "continuous": true
+                }
+              },
+              "volume": null
+            },
+            {
+              "id": 2,
+              "name": "Channel 2",
+              "parameters": {
+                "low": {
+                  "channel": 1,
+                  "cc": 34,
+                  "reset": 64,
+                  "label": "Low",
+                  "section": "EQ",
+                  "csv_name": "EQ LO LEVEL CH 2",
+                  "continuous": true
+                },
+                "high": {
+                  "channel": 1,
+                  "cc": 2,
+                  "reset": 64,
+                  "label": "High",
+                  "section": "EQ",
+                  "csv_name": "EQ HI LEVEL CH 2",
+                  "continuous": true
+                },
+                "mid": {
+                  "channel": 1,
+                  "cc": 22,
+                  "reset": 64,
+                  "label": "Mid",
+                  "section": "EQ",
+                  "csv_name": "EQ MID LEVEL CH 2",
+                  "continuous": true
+                },
+                "level": {
+                  "channel": 1,
+                  "cc": 84,
+                  "label": "Level",
+                  "reset": 80,
+                  "continuous": true
+                }
+              },
+              "volume": null
+            }
+          ],
+          "provenance": {
+            "source": "https://github.com/pencilresearch/midi/blob/809da9bcd810a7a8d2b8ddf55cc734a404e583f4/Zoom/LiveTrak%20L6.csv",
+            "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "revision": "809da9bcd810a7a8d2b8ddf55cc734a404e583f4",
+            "attribution": "Pencil Research MIDI dataset and contributors",
+            "changes": "CSV CC map with existing rig reset values, labels, MIDI channels and volume curves retained."
+          }
+        }
+      ],
+      "banks": [
+        {
+          "id": "bank-1",
+          "name": "Test strip - L6 channel 1",
+          "controller": "twister",
+          "destination": "l6",
+          "channels": [
+            1
+          ],
+          "controls": [
+            {
+              "normal": {
+                "source": {
+                  "channel": 1,
+                  "cc": 0
+                },
+                "feedback": {
+                  "channel": 1,
+                  "cc": 0
+                },
+                "parameter": "low"
+              },
+              "alternate": {
+                "source": {
+                  "channel": 5,
+                  "cc": 0
+                },
+                "feedback": {
+                  "channel": 5,
+                  "cc": 0
+                },
+                "parameter": "mid"
+              }
+            },
+            {
+              "normal": {
+                "source": {
+                  "channel": 1,
+                  "cc": 4
+                },
+                "feedback": {
+                  "channel": 1,
+                  "cc": 4
+                },
+                "parameter": "high"
+              },
+              "alternate": {
+                "source": {
+                  "channel": 5,
+                  "cc": 4
+                },
+                "feedback": {
+                  "channel": 5,
+                  "cc": 4
+                },
+                "parameter": "level"
+              }
+            }
+          ],
+          "depth": 0,
+          "depth_overrides": {}
+        }
+      ],
+      "resets": []
+    },
+    "routing": {
+      "clock": {
+        "source": "TEST - Clock input",
+        "destinations": [],
+        "transport": true
+      },
+      "cc": []
+    },
+    "performance": {
+      "version": 1,
+      "beats_per_bar": 4,
+      "beat_unit": 4,
+      "shift": null,
+      "actions": [
+        {"controller": "twister", "type": "cc", "channel": 2, "number": 0, "action": "capture", "slot": 0},
+        {"controller": "twister", "type": "cc", "channel": 2, "number": 1, "action": "recall", "slot": 0},
+        {"controller": "twister", "type": "cc", "channel": 2, "number": 2, "action": "capture", "slot": 1},
+        {"controller": "twister", "type": "cc", "channel": 2, "number": 3, "action": "recall", "slot": 1}
+      ],
+      "slots": [
+        {
+          "name": "A - test strip",
+          "banks": [],
+          "node": true,
+          "targets": [
+            {
+              "type": "bank",
+              "bank": "bank-1"
+            }
+          ],
+          "quantize_bars": 0
+        },
+        {
+          "name": "B - next bar",
+          "banks": [],
+          "node": true,
+          "targets": [
+            {
+              "type": "bank",
+              "bank": "bank-1"
+            }
+          ],
+          "quantize_bars": 1
+        },
+        {
+          "name": "Snapshot 3",
+          "banks": []
+        },
+        {
+          "name": "Snapshot 4",
+          "banks": []
+        },
+        {
+          "name": "Snapshot 5",
+          "banks": []
+        },
+        {
+          "name": "Snapshot 6",
+          "banks": []
+        },
+        {
+          "name": "Snapshot 7",
+          "banks": []
+        },
+        {
+          "name": "Snapshot 8",
+          "banks": []
+        }
+      ],
+      "mods": [
+        {
+          "name": "Clocked EQ",
+          "shape": "sine",
+          "enabled": false,
+          "timing": "sync",
+          "rate": 1.0,
+          "beats": 4,
+          "playback": "loop",
+          "phase": 0.0,
+          "slew": 0.0,
+          "amount": 1.0,
+          "attack_ms": 0.0,
+          "release_ms": 250.0,
+          "trigger": null,
+          "targets": [],
+          "bank_targets": [],
+          "destinations": [
+            {
+              "device": "l6",
+              "parameter": "low",
+              "channels": [
+                1
+              ],
+              "banks": [],
+              "amount": 0.5,
+              "scale_by_bank": false
+            }
+          ],
+          "velocity": true,
+          "velocity_exponent": 1.0,
+          "max_hold_ms": 30000.0,
+          "mod_targets": [],
+          "note_targets": []
+        }
+      ],
+      "operators": []
+    }
+  },
+  "layout": {
+    "version": 1,
+    "nodes": {},
+    "inputs": {
+      "twister": [
+        {"type": "cc", "channel": 2, "number": 0, "label": "Save A"},
+        {"type": "cc", "channel": 2, "number": 1, "label": "Recall A"},
+        {"type": "cc", "channel": 2, "number": 2, "label": "Save B"},
+        {"type": "cc", "channel": 2, "number": 3, "label": "Recall B"}
+      ]
+    },
+    "pages": [],
+    "controls": {}
+  }
+}

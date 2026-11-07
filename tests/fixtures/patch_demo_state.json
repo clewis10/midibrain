@@ -1,0 +1,1367 @@
+{
+ "setup": {
+  "devices": [
+   {
+    "id": "twister",
+    "name": "MIDI Fighter Twister",
+    "kind": "controller",
+    "input": null,
+    "feedback_output": null,
+    "controls_per_bank": 4,
+    "alternate": true
+   },
+   {
+    "id": "l6",
+    "name": "Zoom L6",
+    "kind": "destination",
+    "output": null,
+    "initialize": true,
+    "channels": [
+     {
+      "id": 1,
+      "name": "Channel 1",
+      "parameters": {
+       "low": {
+        "channel": 1,
+        "cc": 33,
+        "reset": 64,
+        "label": "Low",
+        "section": "EQ",
+        "csv_name": "EQ LO LEVEL CH 1",
+        "continuous": true
+       },
+       "high": {
+        "channel": 1,
+        "cc": 1,
+        "reset": 64,
+        "label": "High",
+        "section": "EQ",
+        "csv_name": "EQ HI LEVEL CH 1",
+        "continuous": true
+       },
+       "aux1": {
+        "channel": 1,
+        "cc": 43,
+        "reset": 0,
+        "label": "Aux1",
+        "section": "AUX",
+        "csv_name": "AUX1 SEND CH 1",
+        "continuous": true
+       },
+       "aux2": {
+        "channel": 1,
+        "cc": 53,
+        "reset": 0,
+        "label": "Aux2",
+        "section": "AUX",
+        "csv_name": "AUX2 SEND CH 1",
+        "continuous": true
+       },
+       "mid": {
+        "channel": 1,
+        "cc": 21,
+        "reset": 64,
+        "label": "Mid",
+        "section": "EQ",
+        "csv_name": "EQ MID LEVEL CH 1",
+        "continuous": true
+       },
+       "efx": {
+        "channel": 1,
+        "cc": 63,
+        "reset": 0,
+        "label": "Efx",
+        "section": "EFX",
+        "csv_name": "EFX SEND CH 1",
+        "continuous": true
+       },
+       "eq_mid_freq": {
+        "cc": 11,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "EQ MID FREQ",
+        "section": "EQ",
+        "csv_name": "EQ MID FREQ CH 1"
+       },
+       "pan": {
+        "cc": 73,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "PAN",
+        "section": "PAN",
+        "csv_name": "PAN CH 1"
+       },
+       "mute": {
+        "cc": 93,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MUTE",
+        "section": "MUTE",
+        "csv_name": "MUTE CH 1"
+       }
+      },
+      "volume": {
+       "channel": 1,
+       "cc": 83,
+       "curve": [
+        [
+         0,
+         100
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      }
+     },
+     {
+      "id": 2,
+      "name": "Channel 2",
+      "parameters": {
+       "low": {
+        "channel": 1,
+        "cc": 34,
+        "reset": 64,
+        "label": "Low",
+        "section": "EQ",
+        "csv_name": "EQ LO LEVEL CH 2",
+        "continuous": true
+       },
+       "high": {
+        "channel": 1,
+        "cc": 2,
+        "reset": 64,
+        "label": "High",
+        "section": "EQ",
+        "csv_name": "EQ HI LEVEL CH 2",
+        "continuous": true
+       },
+       "aux1": {
+        "channel": 1,
+        "cc": 44,
+        "reset": 0,
+        "label": "Aux1",
+        "section": "AUX",
+        "csv_name": "AUX1 SEND CH 2",
+        "continuous": true
+       },
+       "aux2": {
+        "channel": 1,
+        "cc": 54,
+        "reset": 0,
+        "label": "Aux2",
+        "section": "AUX",
+        "csv_name": "AUX2 SEND CH 2",
+        "continuous": true
+       },
+       "mid": {
+        "channel": 1,
+        "cc": 22,
+        "reset": 64,
+        "label": "Mid",
+        "section": "EQ",
+        "csv_name": "EQ MID LEVEL CH 2",
+        "continuous": true
+       },
+       "efx": {
+        "channel": 1,
+        "cc": 64,
+        "reset": 0,
+        "label": "Efx",
+        "section": "EFX",
+        "csv_name": "EFX SEND CH 2",
+        "continuous": true
+       },
+       "eq_mid_freq": {
+        "cc": 12,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "EQ MID FREQ",
+        "section": "EQ",
+        "csv_name": "EQ MID FREQ CH 2"
+       },
+       "pan": {
+        "cc": 74,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "PAN",
+        "section": "PAN",
+        "csv_name": "PAN CH 2"
+       },
+       "mute": {
+        "cc": 94,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MUTE",
+        "section": "MUTE",
+        "csv_name": "MUTE CH 2"
+       }
+      },
+      "volume": {
+       "channel": 1,
+       "cc": 84,
+       "curve": [
+        [
+         0,
+         100
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      }
+     },
+     {
+      "id": 3,
+      "name": "Channel 3",
+      "parameters": {
+       "low": {
+        "channel": 1,
+        "cc": 35,
+        "reset": 64,
+        "label": "Low",
+        "section": "EQ",
+        "csv_name": "EQ LO LEVEL CH 3",
+        "continuous": true
+       },
+       "high": {
+        "channel": 1,
+        "cc": 3,
+        "reset": 64,
+        "label": "High",
+        "section": "EQ",
+        "csv_name": "EQ HI LEVEL CH 3",
+        "continuous": true
+       },
+       "aux1": {
+        "channel": 1,
+        "cc": 45,
+        "reset": 0,
+        "label": "Aux1",
+        "section": "AUX",
+        "csv_name": "AUX1 SEND CH 3",
+        "continuous": true
+       },
+       "aux2": {
+        "channel": 1,
+        "cc": 55,
+        "reset": 0,
+        "label": "Aux2",
+        "section": "AUX",
+        "csv_name": "AUX2 SEND CH 3",
+        "continuous": true
+       },
+       "mid": {
+        "channel": 1,
+        "cc": 23,
+        "reset": 64,
+        "label": "Mid",
+        "section": "EQ",
+        "csv_name": "EQ MID LEVEL CH 3",
+        "continuous": true
+       },
+       "efx": {
+        "channel": 1,
+        "cc": 65,
+        "reset": 0,
+        "label": "Efx",
+        "section": "EFX",
+        "csv_name": "EFX SEND CH 3",
+        "continuous": true
+       },
+       "eq_mid_freq": {
+        "cc": 13,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "EQ MID FREQ",
+        "section": "EQ",
+        "csv_name": "EQ MID FREQ CH 3"
+       },
+       "pan": {
+        "cc": 75,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "PAN",
+        "section": "PAN",
+        "csv_name": "PAN CH 3"
+       },
+       "mute": {
+        "cc": 95,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MUTE",
+        "section": "MUTE",
+        "csv_name": "MUTE CH 3"
+       },
+       "mono_x2": {
+        "cc": 109,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MONO x2",
+        "section": "MONO",
+        "csv_name": "MONO x2 CH 3"
+       }
+      },
+      "volume": {
+       "channel": 1,
+       "cc": 85,
+       "curve": [
+        [
+         0,
+         100
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      }
+     },
+     {
+      "id": 4,
+      "name": "Channel 4",
+      "parameters": {
+       "low": {
+        "channel": 1,
+        "cc": 36,
+        "reset": 64,
+        "label": "Low",
+        "section": "EQ",
+        "csv_name": "EQ LO LEVEL CH 4",
+        "continuous": true
+       },
+       "high": {
+        "channel": 1,
+        "cc": 4,
+        "reset": 64,
+        "label": "High",
+        "section": "EQ",
+        "csv_name": "EQ HI LEVEL CH 4",
+        "continuous": true
+       },
+       "aux1": {
+        "channel": 1,
+        "cc": 46,
+        "reset": 0,
+        "label": "Aux1",
+        "section": "AUX",
+        "csv_name": "AUX1 SEND CH 4",
+        "continuous": true
+       },
+       "aux2": {
+        "channel": 1,
+        "cc": 56,
+        "reset": 0,
+        "label": "Aux2",
+        "section": "AUX",
+        "csv_name": "AUX2 SEND CH 4",
+        "continuous": true
+       },
+       "mid": {
+        "channel": 1,
+        "cc": 24,
+        "reset": 64,
+        "label": "Mid",
+        "section": "EQ",
+        "csv_name": "EQ MID LEVEL CH 4",
+        "continuous": true
+       },
+       "efx": {
+        "channel": 1,
+        "cc": 66,
+        "reset": 0,
+        "label": "Efx",
+        "section": "EFX",
+        "csv_name": "EFX SEND CH 4",
+        "continuous": true
+       },
+       "eq_mid_freq": {
+        "cc": 14,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "EQ MID FREQ",
+        "section": "EQ",
+        "csv_name": "EQ MID FREQ CH 4"
+       },
+       "pan": {
+        "cc": 76,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "PAN",
+        "section": "PAN",
+        "csv_name": "PAN CH 4"
+       },
+       "mute": {
+        "cc": 102,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MUTE",
+        "section": "MUTE",
+        "csv_name": "MUTE CH 4"
+       },
+       "mono_x2": {
+        "cc": 110,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MONO x2",
+        "section": "MONO",
+        "csv_name": "MONO x2 CH 4"
+       }
+      },
+      "volume": {
+       "channel": 1,
+       "cc": 86,
+       "curve": [
+        [
+         0,
+         100
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      }
+     },
+     {
+      "id": 5,
+      "name": "Channel 5",
+      "parameters": {
+       "low": {
+        "channel": 1,
+        "cc": 37,
+        "reset": 64,
+        "label": "Low",
+        "section": "EQ",
+        "csv_name": "EQ LO LEVEL CH 5",
+        "continuous": true
+       },
+       "high": {
+        "channel": 1,
+        "cc": 5,
+        "reset": 64,
+        "label": "High",
+        "section": "EQ",
+        "csv_name": "EQ HI LEVEL CH 5",
+        "continuous": true
+       },
+       "aux1": {
+        "channel": 1,
+        "cc": 47,
+        "reset": 0,
+        "label": "Aux1",
+        "section": "AUX",
+        "csv_name": "AUX1 SEND CH 5",
+        "continuous": true
+       },
+       "aux2": {
+        "channel": 1,
+        "cc": 57,
+        "reset": 0,
+        "label": "Aux2",
+        "section": "AUX",
+        "csv_name": "AUX2 SEND CH 5",
+        "continuous": true
+       },
+       "mid": {
+        "channel": 1,
+        "cc": 25,
+        "reset": 64,
+        "label": "Mid",
+        "section": "EQ",
+        "csv_name": "EQ MID LEVEL CH 5",
+        "continuous": true
+       },
+       "efx": {
+        "channel": 1,
+        "cc": 67,
+        "reset": 0,
+        "label": "Efx",
+        "section": "EFX",
+        "csv_name": "EFX SEND CH 5",
+        "continuous": true
+       },
+       "eq_mid_freq": {
+        "cc": 15,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "EQ MID FREQ",
+        "section": "EQ",
+        "csv_name": "EQ MID FREQ CH 5"
+       },
+       "pan": {
+        "cc": 77,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "PAN",
+        "section": "PAN",
+        "csv_name": "PAN CH 5"
+       },
+       "mute": {
+        "cc": 103,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MUTE",
+        "section": "MUTE",
+        "csv_name": "MUTE CH 5"
+       }
+      },
+      "volume": {
+       "channel": 1,
+       "cc": 87,
+       "curve": [
+        [
+         0,
+         100
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      }
+     },
+     {
+      "id": 6,
+      "name": "Channel 6",
+      "parameters": {
+       "low": {
+        "channel": 1,
+        "cc": 38,
+        "reset": 64,
+        "label": "Low",
+        "section": "EQ",
+        "csv_name": "EQ LO LEVEL CH 6",
+        "continuous": true
+       },
+       "high": {
+        "channel": 1,
+        "cc": 6,
+        "reset": 64,
+        "label": "High",
+        "section": "EQ",
+        "csv_name": "EQ HI LEVEL CH 6",
+        "continuous": true
+       },
+       "aux1": {
+        "channel": 1,
+        "cc": 48,
+        "reset": 0,
+        "label": "Aux1",
+        "section": "AUX",
+        "csv_name": "AUX1 SEND CH 6",
+        "continuous": true
+       },
+       "aux2": {
+        "channel": 1,
+        "cc": 58,
+        "reset": 0,
+        "label": "Aux2",
+        "section": "AUX",
+        "csv_name": "AUX2 SEND CH 6",
+        "continuous": true
+       },
+       "mid": {
+        "channel": 1,
+        "cc": 26,
+        "reset": 64,
+        "label": "Mid",
+        "section": "EQ",
+        "csv_name": "EQ MID LEVEL CH 6",
+        "continuous": true
+       },
+       "efx": {
+        "channel": 1,
+        "cc": 68,
+        "reset": 0,
+        "label": "Efx",
+        "section": "EFX",
+        "csv_name": "EFX SEND CH 6",
+        "continuous": true
+       },
+       "eq_mid_freq": {
+        "cc": 16,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "EQ MID FREQ",
+        "section": "EQ",
+        "csv_name": "EQ MID FREQ CH 6"
+       },
+       "pan": {
+        "cc": 78,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "PAN",
+        "section": "PAN",
+        "csv_name": "PAN CH 6"
+       },
+       "mute": {
+        "cc": 104,
+        "min": 0,
+        "max": 127,
+        "channel": 1,
+        "reset": null,
+        "label": "MUTE",
+        "section": "MUTE",
+        "csv_name": "MUTE CH 6"
+       }
+      },
+      "volume": {
+       "channel": 1,
+       "cc": 88,
+       "curve": [
+        [
+         0,
+         100
+        ],
+        [
+         1,
+         0
+        ]
+       ]
+      }
+     },
+     {
+      "id": 7,
+      "name": "Global",
+      "volume": null,
+      "parameters": {
+       "cc113": {
+        "label": "USB 1/2",
+        "section": "USB",
+        "cc": 113,
+        "channel": 1,
+        "min": 0,
+        "max": 127,
+        "reset": null
+       },
+       "cc114": {
+        "label": "USB 3/4",
+        "section": "USB",
+        "cc": 114,
+        "channel": 1,
+        "min": 0,
+        "max": 127,
+        "reset": null
+       },
+       "cc117": {
+        "label": "EFX TYPE",
+        "section": "EFX",
+        "cc": 117,
+        "channel": 1,
+        "min": 0,
+        "max": 127,
+        "reset": null
+       }
+      }
+     }
+    ],
+    "provenance": {
+     "source": "https://github.com/pencilresearch/midi/blob/809da9bcd810a7a8d2b8ddf55cc734a404e583f4/Zoom/LiveTrak%20L6.csv",
+     "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "revision": "809da9bcd810a7a8d2b8ddf55cc734a404e583f4",
+     "attribution": "Pencil Research MIDI dataset and contributors",
+     "changes": "CSV CC map with existing rig reset values, labels, MIDI channels and volume curves retained."
+    }
+   },
+   {
+    "id": "a4",
+    "name": "MIDI input",
+    "kind": "controller",
+    "input": null,
+    "feedback_output": null,
+    "controls_per_bank": 1,
+    "layers": [
+     "normal"
+    ]
+   }
+  ],
+  "banks": [
+   {
+    "id": "bank-1",
+    "name": "Bank 1",
+    "controller": "twister",
+    "destination": "l6",
+    "channels": [
+     1,
+     3
+    ],
+    "controls": [
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 0
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 0
+       },
+       "parameter": "low"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 0
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 0
+       },
+       "parameter": "mid"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 4
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 4
+       },
+       "parameter": "high"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 4
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 4
+       },
+       "parameter": null
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 8
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 8
+       },
+       "parameter": "aux1"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 8
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 8
+       },
+       "parameter": "efx"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 12
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 12
+       },
+       "parameter": "aux2"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 12
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 12
+       },
+       "parameter": "depth"
+      }
+     }
+    ],
+    "depth": 0.5,
+    "depth_overrides": {
+     "1": 0.5,
+     "3": 0.5
+    }
+   },
+   {
+    "id": "bank-2",
+    "name": "Bank 2",
+    "controller": "twister",
+    "destination": "l6",
+    "channels": [
+     2
+    ],
+    "controls": [
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 1
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 1
+       },
+       "parameter": "low"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 1
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 1
+       },
+       "parameter": "mid"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 5
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 5
+       },
+       "parameter": "high"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 5
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 5
+       },
+       "parameter": null
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 9
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 9
+       },
+       "parameter": "aux1"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 9
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 9
+       },
+       "parameter": "efx"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 13
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 13
+       },
+       "parameter": "aux2"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 13
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 13
+       },
+       "parameter": "depth"
+      }
+     }
+    ],
+    "depth": 0.5,
+    "depth_overrides": {
+     "2": 0.5
+    }
+   },
+   {
+    "id": "bank-3",
+    "name": "Bank 3",
+    "controller": "twister",
+    "destination": "l6",
+    "channels": [
+     4,
+     5
+    ],
+    "controls": [
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 2
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 2
+       },
+       "parameter": "low"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 2
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 2
+       },
+       "parameter": "mid"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 6
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 6
+       },
+       "parameter": "high"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 6
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 6
+       },
+       "parameter": null
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 10
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 10
+       },
+       "parameter": "aux1"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 10
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 10
+       },
+       "parameter": "efx"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 14
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 14
+       },
+       "parameter": "aux2"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 14
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 14
+       },
+       "parameter": "depth"
+      }
+     }
+    ],
+    "depth": 0.5,
+    "depth_overrides": {
+     "4": 0.5,
+     "5": 0.5
+    }
+   },
+   {
+    "id": "bank-4",
+    "name": "Bank 4",
+    "controller": "twister",
+    "destination": "l6",
+    "channels": [
+     6
+    ],
+    "controls": [
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 3
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 3
+       },
+       "parameter": "low"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 3
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 3
+       },
+       "parameter": "mid"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 7
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 7
+       },
+       "parameter": "high"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 7
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 7
+       },
+       "parameter": null
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 11
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 11
+       },
+       "parameter": "aux1"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 11
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 11
+       },
+       "parameter": "efx"
+      }
+     },
+     {
+      "normal": {
+       "source": {
+        "channel": 1,
+        "cc": 15
+       },
+       "feedback": {
+        "channel": 1,
+        "cc": 15
+       },
+       "parameter": "aux2"
+      },
+      "alternate": {
+       "source": {
+        "channel": 5,
+        "cc": 15
+       },
+       "feedback": {
+        "channel": 5,
+        "cc": 15
+       },
+       "parameter": "depth"
+      }
+     }
+    ],
+    "depth": 0.5,
+    "depth_overrides": {
+     "6": 0.5
+    }
+   }
+  ],
+  "resets": [
+   {
+    "controller": "twister",
+    "channel": 4,
+    "cc": 8,
+    "bank": "bank-1",
+    "channel_id": null
+   },
+   {
+    "controller": "twister",
+    "channel": 4,
+    "cc": 9,
+    "bank": null,
+    "channel_id": null
+   },
+   {
+    "controller": "twister",
+    "channel": 4,
+    "cc": 10,
+    "bank": "bank-2",
+    "channel_id": null
+   },
+   {
+    "controller": "twister",
+    "channel": 4,
+    "cc": 11,
+    "bank": "bank-3",
+    "channel_id": null
+   },
+   {
+    "controller": "twister",
+    "channel": 4,
+    "cc": 12,
+    "bank": null,
+    "channel_id": null
+   },
+   {
+    "controller": "twister",
+    "channel": 4,
+    "cc": 13,
+    "bank": "bank-4",
+    "channel_id": null
+   }
+  ]
+ },
+ "performance": {
+  "version": 1,
+  "beats_per_bar": 4,
+  "beat_unit": 4,
+  "shift": null,
+  "actions": [],
+  "slots": [
+   {
+    "name": "Snapshot 1",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 2",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 3",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 4",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 5",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 6",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 7",
+    "banks": []
+   },
+   {
+    "name": "Snapshot 8",
+    "banks": []
+   }
+  ],
+  "mods": [
+   {
+    "name": "Sidechain",
+    "shape": "envelope",
+    "enabled": true,
+    "timing": "free",
+    "rate": 1.0,
+    "beats": 1.0,
+    "playback": "gate",
+    "phase": 0.0,
+    "slew": 0.0,
+    "amount": 1.0,
+    "attack_ms": 0.0,
+    "release_ms": 250,
+    "trigger": {
+     "controller": "a4",
+     "type": "note",
+     "channel": 5,
+     "number": null
+    },
+    "targets": [],
+    "bank_targets": [
+     {
+      "bank": "bank-1",
+      "parameter": "volume"
+     },
+     {
+      "bank": "bank-2",
+      "parameter": "volume"
+     },
+     {
+      "bank": "bank-3",
+      "parameter": "volume"
+     },
+     {
+      "bank": "bank-4",
+      "parameter": "volume"
+     }
+    ],
+    "destinations": [],
+    "velocity": true,
+    "velocity_exponent": 1,
+    "max_hold_ms": 30000,
+    "mod_targets": []
+   },
+   {
+    "name": "MOD 2",
+    "shape": "sine",
+    "enabled": false,
+    "timing": "free",
+    "rate": 1.0,
+    "beats": 1.0,
+    "playback": "loop",
+    "phase": 0.0,
+    "slew": 0.0,
+    "amount": 1.0,
+    "attack_ms": 0.0,
+    "release_ms": 250.0,
+    "trigger": null,
+    "targets": [],
+    "bank_targets": [],
+    "destinations": [],
+    "velocity": true,
+    "velocity_exponent": 1.0,
+    "max_hold_ms": 30000.0,
+    "mod_targets": []
+   },
+   {
+    "name": "MOD 3",
+    "shape": "sine",
+    "enabled": false,
+    "timing": "free",
+    "rate": 1.0,
+    "beats": 1.0,
+    "playback": "loop",
+    "phase": 0.0,
+    "slew": 0.0,
+    "amount": 1.0,
+    "attack_ms": 0.0,
+    "release_ms": 250.0,
+    "trigger": null,
+    "targets": [],
+    "bank_targets": [],
+    "destinations": [],
+    "velocity": true,
+    "velocity_exponent": 1.0,
+    "max_hold_ms": 30000.0,
+    "mod_targets": []
+   }
+  ]
+ },
+ "routing": {
+  "clock": {
+   "source": null,
+   "destinations": [],
+   "transport": true
+  },
+  "cc": []
+ },
+ "available": {
+  "inputs": [
+   "L6:L6 MIDI I/O",
+   "Midi Fighter Twister:Control",
+   "Digitone II:MIDI"
+  ],
+  "outputs": [
+   "L6:L6 MIDI I/O",
+   "L6:L6 Mixer Control",
+   "Midi Fighter Twister:Control",
+   "Digitone II:MIDI",
+   "Analog Four:MIDI"
+  ]
+ }
+}
